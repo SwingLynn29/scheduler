@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Scheduler - Login</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="authbg">
+    <form class="authbox" method="post">
+        <img src="/static/logo.jpg" class="alogo" alt="Scheduler">
+        <h2>Masuk sebagai {{ 'Administrator' if role=='admin' else 'Guru' }}</h2>
+        <div class="tabs">
+            <a href="/login/admin" class="{{ 'on' if role=='admin' }}">Admin</a>
+            <a href="/login/guru" class="{{ 'on' if role=='guru' }}">Guru</a>
+        </div>
+        {% for m in get_flashed_messages() %}
+        <p class="err">{{m}}</p>
+        {% endfor %}
+        <input name="username" placeholder="Username" required>
+        <input name="password" type="password" placeholder="Password" required>
+        <button class="btn">Masuk</button>
+    </form>
+</body>
+
+</html>

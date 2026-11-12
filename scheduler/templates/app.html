@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scheduler - Sistem Penjadwalan Sekolah</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="shell">
+        <aside class="side">
+            <div class="logo"><img src="/static/logo.jpg" alt="Scheduler"></div>
+            <nav id="nav"></nav>
+        </aside>
+
+        <div class="main">
+            <header class="top">
+                <div class="search">
+                    <input id="q" placeholder="Cari ruangan, mata pelajaran, atau jadwal..." autocomplete="off">
+                    <div id="sres" class="drop"></div>
+                </div>
+                <div class="tools">
+                    <button class="ib" id="bell" title="Notifikasi">🔔<b id="bn"></b></button>
+                    <button class="ib" id="mail" title="Pesan & Perizinan">✉️</button>
+                    <div class="prof" id="prof">
+                        <span id="hello"></span>
+                        <div id="av" class="av"></div>
+                    </div>
+                </div>
+                <div id="bellp" class="drop right"></div>
+                <div id="menu" class="drop right"></div>
+            </header>
+
+            <main id="view"></main>
+        </div>
+    </div>
+
+    <div id="modal" class="modal"></div>
+    <script src="/static/app.js"></script>
+</body>
+
+</html>
